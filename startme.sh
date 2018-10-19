@@ -7,7 +7,7 @@ SKIP_REFRESH=${SKIP_REFRESH:-}
 if [ -z "${OVERRIDE}" ]
 then
 	mkdir -p /var/www/html
-	darkhttpd /var/www/html --port 80 --daemon
+	darkhttpd /var/www/html --port $(PORT:-80} --daemon
 	if [ -z "${SKIP_REFRESH}" ]
 	then
 		wget -qO- https://codeload.github.com/dokku/simp_le/tar.gz/master | tar xz -C /
