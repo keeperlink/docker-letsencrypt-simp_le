@@ -28,3 +28,5 @@ By default the container starts with an entrypoint-script which passes all argum
 
 	docker run -ti -p 80:80 -v /etc/nginx/certs:/certs -e "OVERRIDE=1" \
 		dokku/letsencrypt-simp_le sh
+
+Use environment variable to change listening port: -e PORT=8080
